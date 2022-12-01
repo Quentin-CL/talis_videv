@@ -1,0 +1,47 @@
+<% layout('layouts/boilerplateAdmin')%>
+<div class="row">
+  <h1 class="text-center">New TV Show</h1>
+  <div class="col-6 offset-3">
+    <form action="/" method="post" class="validated-form" novalidate>
+      <div class="mb-3">
+        <label class="form-label" for="title">Title</label>
+        <input class="form-control" type="text" id="title" name="tvShow[title]" required />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="location">Location</label>
+        <input class="form-control" type="text" id="location" name="tvShow[location]" required />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="image">Image Url</label>
+        <input class="form-control" type="text" id="image" name="tvShow[image]" required />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="premiered">Year of creation</label>
+        <input class="form-control" type="text" id="premiered" name="tvShow[premiered]" required />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="rating">Rating over 10</label>
+        <input class="form-control" type="text" id="rating" name="tvShow[rating]" required />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="category">Category</label>
+        <input class="form-control" type="text" id="category" name="tvShow[category]" required />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="description">Description</label>
+        <textarea class="form-control" type="text" id="description" name="tvShow[description]" style="height: 150px" required></textarea>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-success">Add TV Show</button>
+      </div>
+    </form>
+    <a href="/admin/tvshows">All TV Shows</a>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="banner">
+  <% for (const tvShowBanner of tvShowsBanner){ %>
+  <article class="banner-article">
+    <div>
+      <img src="<%= tvShowBanner.background %>" alt="Presentation picture of" />
+      <div class="shader"></div>
+    </div>
+    <div class="tv-show-properties">
+      <h2><%= tvShowBanner.title%></h2>
+      <div class="banner-description"><%-tvShowBanner.description%></div>
+      <div>
+        <span><%=tvShowBanner.premiered%></span>
+        <span> <i class="bi bi-star-fill"></i><%=tvShowBanner.rating%></span>
+      </div>
+      <div>
+        <i class="bi bi-play"></i>
+        <p>Play</p>
+      </div>
+    </div>
+  </article>
+  <% } %>
+</div>

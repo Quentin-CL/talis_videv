@@ -1,0 +1,38 @@
+@include reset-css;
+@font-face {
+    font-family: "fira";
+    src: url("../font/FiraSans-Regular.ttf");
+}
+@font-face {
+    font-family: "fira-bold";
+    src: url("../font/FiraSans-Bold.ttf");
+}
+@font-face {
+    font-family: "five-ceta";
+    src: url("../font/5ceta_mono.ttf");
+}
+body{
+    background-color: black;
+    font-family: "fira";
+    padding: 1rem 1rem;
+    line-height: 20px;
+}
+p, a, span, i, b, h2,h3{
+    color: white;
+}
+b{
+    font-weight: 700;
+}
+h2{
+    text-transform: uppercase;
+    font-size: 20px;
+}
+h2,h3{
+    font-family: "fira-bold";
+}
+h3{
+    font-size: 18px;
+}
+.display-none{
+    display: none;
+}

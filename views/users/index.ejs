@@ -1,0 +1,19 @@
+<% layout('layouts/boilerplateAdmin')%>
+
+<h1>All users</h1>
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-6 row-cols-lg-3 g-2">
+    <% for (let user of users){%>
+    <div class="col-md-6 col-lg-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><%= user.lastname.toUpperCase() %> <%= user.firstname %></h5>
+          <p class="card-text mb-1">Mail : <%= user.email %></p>
+          <p class="card-text text-muted">Password : <%= user.password %></p>
+          <a class="btn btn-primary" href="/admin/users/<%=user._id%>">View</a>
+        </div>
+      </div>
+    </div>
+    <% }%>
+  </div>
+</div>

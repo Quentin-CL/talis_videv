@@ -1,0 +1,394 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  color: black;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  overflow-x: hidden;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "fira";
+  src: url("../font/FiraSans-Regular.ttf");
+}
+@font-face {
+  font-family: "fira-bold";
+  src: url("../font/FiraSans-Bold.ttf");
+}
+@font-face {
+  font-family: "five-ceta";
+  src: url("../font/5ceta_mono.ttf");
+}
+body {
+  background-color: black;
+  font-family: "fira";
+  padding: 1rem 1rem;
+  line-height: 20px;
+}
+
+p, a, span, i, b, h2, h3 {
+  color: white;
+}
+
+b {
+  font-weight: 700;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+h2, h3 {
+  font-family: "fira-bold";
+}
+
+h3 {
+  font-size: 18px;
+}
+
+.display-none {
+  display: none;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+nav ul div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+}
+nav ul img {
+  width: 125px;
+}
+nav ul i {
+  font-size: 20px;
+}
+nav ul button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #383b3c;
+}
+
+.nav-links a {
+  background-color: black;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 20px;
+  transition: all 0.3s;
+}
+.nav-links a:hover {
+  background-color: #2a9d8f;
+  color: black;
+}
+
+.banner {
+  display: flex;
+  width: 500vw;
+  animation-duration: 30s;
+  animation-name: identifier;
+  animation-iteration-count: infinite;
+}
+
+.banner-article {
+  display: flex;
+  width: 100vw;
+}
+.banner-article > div:first-of-type {
+  width: 70%;
+  position: relative;
+}
+.banner-article > div:first-of-type img {
+  width: 100%;
+}
+
+.tv-show-properties {
+  width: 30%;
+  padding: 0 3rem 0 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.tv-show-properties > div:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.bi-star-fill {
+  color: #FFC300;
+  margin: 0 5px 0 1rem;
+}
+
+.bi-play {
+  font-size: 25px;
+  padding: 12px;
+  background-color: #2a9d8f;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+.bi-play:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.banner-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.shader {
+  position: absolute;
+  top: 0;
+  left: 95%;
+  width: 5%;
+  height: 100%;
+  background: linear-gradient(0.25turn, rgba(0, 0, 0, 0), black);
+}
+
+@keyframes identifier {
+  0% {
+    transform: translate(0, 0);
+  }
+  3% {
+    transform: translate(0, 0);
+  }
+  22% {
+    transform: translate(-100vw, 0);
+  }
+  28% {
+    transform: translate(-100vw, 0);
+  }
+  47% {
+    transform: translate(-200vw, 0);
+  }
+  53% {
+    transform: translate(-200vw, 0);
+  }
+  72% {
+    transform: translate(-300vw, 0);
+  }
+  77% {
+    transform: translate(-300vw, 0);
+  }
+  97% {
+    transform: translate(-400vw, 0);
+  }
+  100% {
+    transform: translate(-400vw, 0);
+  }
+}
+.carousel-img-container {
+  padding: 0 1rem;
+}
+.carousel-img-container > img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.section-carousel {
+  margin-top: 2rem;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+.carousel {
+  margin: 0 10px;
+}
+
+.slick-prev {
+  z-index: 2;
+  height: 100%;
+  width: 2rem;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.slick-prev:before {
+  content: "<";
+  font-size: 20px;
+  font-weight: 1000;
+}
+
+.slick-next {
+  height: 100%;
+  width: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.slick-next:before {
+  content: ">";
+  font-size: 20px;
+  font-weight: 1000;
+}
+
+.ranking {
+  font-family: "five-ceta";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  font-size: 40px;
+  opacity: 0.7;
+}
+
+.carousel-content {
+  position: relative;
+  transition: all 0.3s;
+}
+.carousel-content:hover {
+  transform: scale(1.1);
+}
+.carousel-content:hover .carousel-content-hover > div:last-child {
+  transform: scale(0.9);
+  padding: 0;
+}
+
+.carousel-content-hover {
+  margin: 0 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #383b3c;
+  border: 1px solid #2a9d8f;
+  border-radius: 5px;
+}
+.carousel-content-hover > div:last-child {
+  padding: 10px;
+}
+.carousel-content-hover i {
+  display: inline-block;
+  padding: 5px;
+}
+.carousel-content-hover h2 {
+  margin: 10px 0;
+}
+
+.play-button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.slick-list {
+  overflow: visible;
+}
+
+.carousel-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.img-hover {
+  position: relative;
+}
+.img-hover > img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.carousel-shader {
+  position: absolute;
+  top: 86%;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  background: linear-gradient(rgba(56, 59, 60, 0), #383b3c);
+}
+
+footer {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+footer div:first-child {
+  width: 100px;
+}
+footer div:first-child img {
+  width: 100%;
+}
+footer a {
+  color: #2a9d8f;
+  font-size: 15px;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+footer span {
+  font-size: 12px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */

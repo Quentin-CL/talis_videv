@@ -1,0 +1,25 @@
+footer{
+    padding: 2rem 0;
+    @include flex(center,center, column);
+    gap: 1rem;
+    div:first-child{
+        width: 100px;
+        img{
+            width: 100%;
+        }
+    }
+    a{
+        color: $firstcolor;
+        font-size: 15px;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+    span{
+        font-size: 12px;
+    }
+}
+.footer-content{
+    @include flex;
+    gap: 10px;
+}

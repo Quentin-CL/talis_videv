@@ -1,0 +1,68 @@
+.banner{
+    display: flex;
+    width: 500vw;
+    animation-duration: 30s;
+    animation-name: identifier;
+    animation-iteration-count: infinite;
+}
+.banner-article{
+    display: flex;
+    width: 100vw;
+    >div:first-of-type{
+        width: 70%;
+        position: relative;
+        img{
+            width: 100%;
+        }
+    }
+}
+.tv-show-properties{
+    width: 30%;
+    padding:  0 3rem 0 1.5rem;
+    @include flex(center, flex-start, column);
+    >div:last-child{
+        @include flex();
+        gap: 10px;
+        margin-top: 10px;
+    }
+}
+.bi-star-fill{
+    color:#FFC300;
+    margin: 0 5px 0 1rem;
+}
+.bi-play{
+    font-size: 25px;
+    padding: 12px;
+    background-color: $firstcolor;
+    border-radius: 50%;
+    transition: all 0.3s;
+    &:hover{
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+}
+.banner-description{
+    @include truncate(8);
+    margin: 1rem 0;
+}
+.shader{
+    position: absolute;
+    top: 0;
+    left: 95%;
+    width: 5%;
+    height: 100%;
+    background: linear-gradient(0.25turn,rgba($color: black, $alpha: 0),rgba($color: black, $alpha: 1));
+}
+
+@keyframes identifier {
+    0% { transform: translate(0,0); }
+    3% { transform: translate(0,0); }
+    22% { transform: translate(-100vw,0);}
+    28% { transform: translate(-100vw,0);}
+    47% { transform: translate(-200vw,0);}
+    53% { transform: translate(-200vw,0);}
+    72% { transform: translate(-300vw,0);}
+    77% { transform: translate(-300vw,0);}
+    97% { transform: translate(-400vw,0);}
+    100% { transform: translate(-400vw,0);}
+  }

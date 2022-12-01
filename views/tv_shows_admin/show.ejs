@@ -1,0 +1,25 @@
+<% layout('layouts/boilerplateAdmin')%>
+
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    <div class="card mb-3">
+      <img src="<%= tvShow.image%>" class="card-img-top w-50 mx-auto" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title"><%= tvShow.title%></h5>
+        <div><%- tvShow.description%></div>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Year : <%= tvShow.premiered%></li>
+        <li class="list-group-item">Rating : <%= tvShow.rating%></li>
+        <li class="list-group-item">Category : <%= tvShow.category%></li>
+      </ul>
+      <div class="card-body">
+        <a class="card-link btn btn-info" href="/admin/tvshows/<%=tvShow._id%>/edit">Edit</a>
+        <form class="d-inline" action="/" method="POST">
+          <button class="btn btn-danger">Delete</button>
+        </form>
+      </div>
+      <div class="card-footer text-muted">2 days ago</div>
+    </div>
+  </div>
+</div>

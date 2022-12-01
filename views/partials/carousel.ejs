@@ -1,0 +1,34 @@
+<% let rank = 1 %>
+<section class="section-carousel">
+  <h3><%= variantName %></h3>
+  <div class="carousel">
+    <% for (const tvShow of variant) {%>
+    <div class="carousel-content">
+      <div class="carousel-content-hover display-none">
+        <div class="img-hover">
+          <div class="carousel-shader"></div>
+          <img src="<%= tvShow.background %> " alt="" />
+        </div>
+        <div>
+          <div class="play-button">
+            <i class="bi bi-play"></i>
+            <p>Play</p>
+          </div>
+          <h2><%= tvShow.title %></h2>
+          <div class="carousel-description"><%- tvShow.description %></div>
+          <div>
+            <span><%=tvShow.premiered%></span>
+            <span> <i class="bi bi-star-fill"></i><%=tvShow.rating%></span>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-img-container">
+        <% if (variantName=== "Trending"){ %>
+        <span class="ranking"><%= rank %> </span>
+        <% rank+=1 %> <% } %>
+        <img src="<%= tvShow.background %> " alt="" />
+      </div>
+    </div>
+    <% } %>
+  </div>
+</section>

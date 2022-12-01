@@ -1,0 +1,20 @@
+<% layout('layouts/boilerplateAdmin')%>
+
+<h1>All TV Shows</h1>
+<a href="/admin/tvshows/new">Add a TV Show</a>
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-6 row-cols-lg-3 g-2">
+    <% for (const tvShow of tvShows){%>
+    <div class="col-md-6 col-lg-3">
+      <div class="card">
+        <img src="<%= tvShow.image %> " alt="Image de presentation de la serie" />
+        <div class="card-body">
+          <h5 class="card-title"><%= tvShow.title.toUpperCase() %></h5>
+          <p class="cart-text text-muted">Category : <%= tvShow.category %></p>
+          <a class="btn btn-primary text-center" href="/admin/tvshows/<%=tvShow._id%>">View</a>
+        </div>
+      </div>
+    </div>
+    <% }%>
+  </div>
+</div>
