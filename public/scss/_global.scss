@@ -1,3 +1,8 @@
+
+//*************************************************************
+// Global
+//*************************************************************
+
 @include reset-css;
 @font-face {
     font-family: "fira";
@@ -14,7 +19,6 @@
 body{
     background-color: black;
     font-family: "fira";
-    padding: 1rem 1rem;
     line-height: 20px;
 }
 p, a, span, i, b, h2,h3{

@@ -5,24 +5,25 @@ const User = require('./models/users');
 const TvShow = require('./models/tvshows');
 const mongoose = require('mongoose');
 
-
+// Connection à la BDD
 mongoose.connect("mongodb://localhost:27017/streaming-platform");
-
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, 'connection error:'));
 db.once('open', () => {
     console.log("Database connected");
 });
 
+// Creation de l'environement Express
 const app = express();
 
 app.engine('ejs', ejsMate);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-app.use(express.urlencoded({ extended: true }));
+// Necessaire à l'utilisation des fichiers statique dans le dossier public
 app.use(express.static("public"));
 
+// Rooting vers le home
 app.get('/', async (req, res) => {
     const tvShowsBanner = await TvShow.find({ banner: true });
     //Ajout du premier element en dernier pour génerer un defilement continu de la bannière
@@ -63,9 +64,10 @@ app.get('/admin/users/:id/edit', async (req, res) => {
     res.render("users/edit", { user });
 })
 
+//CRUD TV shows
+
 app.get('/admin/tvshows', async (req, res) => {
     const tvShows = await TvShow.find({});
-    // const tvshows = await Promise.all(tvShowsSelec.map(async tvShowSelec => await axios.get(`https://api.tvmaze.com/singlesearch/shows?q=${tvShowSelec.title}`, { headers: { 'Accept-Encoding': 'application/json', } })));
     res.render('tv_shows_admin/index', { tvShows });
 })
 app.get('/admin/tvshows/new', (req, res) => {
@@ -82,19 +84,14 @@ app.get('/admin/tvshows/:id/edit', async (req, res) => {
     res.render("tv_shows_admin/edit", { tvShow });
 })
 
+//Gestion des appels de path non definis
 app.all('*', (req, res, next) => {
     throw new Error('Page Not Found');
 })
 
-app.use((err, req, res, next) => {
-    const { statusCode = 500 } = err;
-    if (!err.message) err.message = 'Something went wrong';
-    res.status(statusCode).render("error", { err });
-})
 
 
-
-
+//Lancement du serveur local
 app.listen(3000, () => {
     console.log("Listening on port 3000")
 })

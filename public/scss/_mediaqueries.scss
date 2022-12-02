@@ -1,0 +1,49 @@
+
+//*************************************************************
+// MediaQueries
+//*************************************************************
+
+@include mq("tablet-wide", max){
+    nav ul:first-child{
+        display: none;
+    }
+    .hamburger{
+        button{
+            display: block;
+        }
+    }
+}
+@include mq("tablet", max){
+    .banner-description{
+        @include truncate(4);
+    }
+}
+@include mq("tablet-small", max){
+    .tv-show-properties *:not(.bi-play){
+        display: none;
+    }
+    .tv-show-properties{
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: fit-content;
+    }
+    .banner-article{
+        position: relative;
+        .tv-show-img{
+            width: 100%;
+            margin: 0 auto;
+        }
+        .shader{
+            width: 100%;
+            background: rgba($color: black, $alpha: 0.2);
+            top: 0;
+            left: 0;
+        }
+    }
+    .footer-content{
+        flex-wrap: wrap;
+    }
+
+}

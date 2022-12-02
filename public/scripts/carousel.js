@@ -1,3 +1,4 @@
+// Fonction permettant de créér le carrousel avec Slick
 function activateCarousel(classes) {
     for (const c of classes) {
         $(c).slick({
@@ -12,7 +13,6 @@ function activateCarousel(classes) {
                     settings: {
                         slidesToShow: 3,
                         slidesToScroll: 3,
-                        infinite: true,
                     }
                 },
                 {
@@ -34,6 +34,7 @@ function activateCarousel(classes) {
     }
 }
 
+// Fonction permettant d'afficher les informations des series au passage de la souris
 function tvShowHover() {
     const carouselContents = document.querySelectorAll(".carousel-content");
     const carouselContentsHover = document.querySelectorAll(".carousel-content-hover")

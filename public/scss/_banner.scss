@@ -1,3 +1,8 @@
+
+//*************************************************************
+// Banner
+//*************************************************************
+
 .banner{
     display: flex;
     width: 500vw;
@@ -6,9 +11,13 @@
     animation-iteration-count: infinite;
 }
 .banner-article{
-    display: flex;
     width: 100vw;
-    >div:first-of-type{
+    >div{
+        display: flex;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    .tv-show-img{
         width: 70%;
         position: relative;
         img{
@@ -53,7 +62,6 @@
     height: 100%;
     background: linear-gradient(0.25turn,rgba($color: black, $alpha: 0),rgba($color: black, $alpha: 1));
 }
-
 @keyframes identifier {
     0% { transform: translate(0,0); }
     3% { transform: translate(0,0); }

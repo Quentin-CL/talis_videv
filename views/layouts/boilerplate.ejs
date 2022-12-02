@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Ajout des icones bootstrap, de slick pour les carrousels et de notre css -->
     <link rel="stylesheet" href="libs/css/bootstrap-icons.css" />
     <link rel="stylesheet" href="libs/css/slick.css" />
     <link rel="stylesheet" href="libs/css/slick-theme.css" />
@@ -14,9 +15,11 @@
     <header><%- include('../partials/navbar') %> <%- include('../partials/banner'); %></header>
     <main><%- body %></main>
     <%- include('../partials/footer') %>
+    <!-- Ajout de jquery pour slick et des scripts JS -->
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="libs/js/slick.js"></script>
+    <script src="scripts/menuBurger.js"></script>
     <script src="scripts/carousel.js"></script>
   </body>
 </html>
